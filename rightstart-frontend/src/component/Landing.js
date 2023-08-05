@@ -41,6 +41,25 @@ const Landing = () => {
         </div>
       </div>
 
+      {/* Mission and Vision section */}
+      <div class="missionVision">
+        <div class="missionVisionContent">
+          <br></br>
+          <div class="missionVisionEachSection">
+            <h2 class="missionVisionHeader">Our Mission</h2>
+            <p class="aboutText">At Right Start Montessori we have been providing a homely, warm, and safe environment for over 14 years in our privately owned setting in Curraghmore, Kiltoom, Athlone. To ensure high quality standards we follow the Montessori philosophy on education along with the Aistear and Siolta Frameworks. Using both approaches assist us with supporting the overall holistic development of each child which empowers them to actively pursue their own learning. We also understand the importance of children connecting with nature and incorporate outdoor play and work within our curriculum to allow children experience this exciting environment and all it offers.</p>
+            <br></br>
+          </div>
+          
+          <div class="missionVisionEachSection">
+            <h2 class="missionVisionHeader">Our Vision</h2>
+            <p class="aboutText">At Right Start Montessori we have been providing a homely, warm, and safe environment for over 14 years in our privately owned setting in Curraghmore, Kiltoom, Athlone. To ensure high quality standards we follow the Montessori philosophy on education along with the Aistear and Siolta Frameworks. Using both approaches assist us with supporting the overall holistic development of each child which empowers them to actively pursue their own learning. We also understand the importance of children connecting with nature and incorporate outdoor play and work within our curriculum to allow children experience this exciting environment and all it offers.</p>
+            <br></br>
+          </div>
+
+        </div>
+      </div>
+
       {/* our services, staff, subsidies, and fees */}
       <div class="ssfoptionSection">
         {/* i think i will have to do a vertical flex column for each picture and button and then a flex horizontal column for each pair */}
