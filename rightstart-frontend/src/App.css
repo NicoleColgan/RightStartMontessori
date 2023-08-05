@@ -145,5 +145,24 @@ body {
   font-weight: 450;
   cursor: pointer;
 }
-
+/* mission and vision */
+.missionVision{
+  background-color: #B26DAA;
+  margin: 30px;
+}
+.missionVisionContent{
+  margin: 40px;
+}
+.missionVisionHeader{
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 10px purple;
+  font-family: Comic Sans MS;
+}
+.missionVisionEachSection{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
