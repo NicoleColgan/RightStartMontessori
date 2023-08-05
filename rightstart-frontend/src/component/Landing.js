@@ -40,6 +40,23 @@ const Landing = () => {
           </div>
         </div>
       </div>
+
+      {/* our services, staff, subsidies, and fees */}
+      <div class="ssfoptionSection">
+        {/* i think i will have to do a vertical flex column for each picture and button and then a flex horizontal column for each pair */}
+        <div class="ssfPanels">
+          <img src="about1.jpg" class="ssfPanelImage"></img>
+          <button class="ssfPanelButton">Our Services</button>
+        </div>
+        <div class="ssfPanels">
+          <img src="about1.jpg" class="ssfPanelImage"></img>
+          <button class="ssfPanelButton">Our Staff</button>
+        </div>
+        <div class="ssfPanels">
+          <img src="about1.jpg" class="ssfPanelImage"></img>
+          <button class="ssfPanelButton">Subsidies and Fees</button>
+        </div>
+      </div>
       
     </div>
   );

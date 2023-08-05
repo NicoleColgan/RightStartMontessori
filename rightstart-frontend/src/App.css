@@ -76,7 +76,7 @@ body {
   padding: 20px;
 }
 .aboutHeader {
-  margin-top: -10px;
+  margin-top: -20px;
   margin-bottom: 40px;
   font-size: 40px;
   color: white;
@@ -111,6 +111,39 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: -10px;
+}
+.ssfoptionSection{
+  background-color: #E0986F;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.ssfPanelImage {
+  width: 202.5px;
+  height: 297px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.ssfPanels {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.ssfPanelButton {
+  color: white;
+  background-color: #973E8E;
+  font-family: Comic Sans MS;
+  width: 202.5px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  margin-bottom: 40px;
+  font-weight: 450;
+  cursor: pointer;
 }
 
 
