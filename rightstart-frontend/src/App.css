@@ -62,7 +62,6 @@ body {
 .navbar {
   background-color: white !important;
   padding: 10px;
-  border-radius: 10px; 
 }
 
 /* about */
@@ -164,5 +163,50 @@ body {
 .missionVisionEachSection{
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+/* Enroll */
+.enrollPanel{
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  border-color: white;
+}
+.enrollLogo{
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+}
+.enrollContainer{
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enrollContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.enrollButton {
+  color: white;
+  background-color: #973E8E;
+  font-family: Comic Sans MS;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  margin-bottom: 40px;
+  font-weight: 5000;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Footer */
+.footerImage{
+  width: 150px;
+  height: 300px;
 }
 

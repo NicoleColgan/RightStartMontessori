@@ -76,7 +76,43 @@ const Landing = () => {
           <button class="ssfPanelButton">Subsidies and Fees</button>
         </div>
       </div>
-      
+
+      {/* Enroll section */}
+      <div class="enrollContainer">
+        <div class="enrollPanel">
+          <div class="enrollContent">
+            <img src="Logo.JPG" class="enrollLogo"></img>
+            <button class="enrollButton">Enroll Your Child Now</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div class="footer">
+        <div class="footerBorder">
+          <div class="footerSections">
+            <img src="Logo.JPG" class="footerImage"></img>
+          </div>
+          <div class="footerSections">
+            <h2 class="navigationHeading">Navigation</h2>
+            <ul class="navigationContent">
+              <li>Home</li>
+              <li>About US</li>
+              <li>Our Mission</li>
+              <li>Our Vision</li>
+              <li>Gallery</li>
+              <li>Our Services</li>
+              <li>Staff</li>
+              <li>Subsidies & Fees</li>
+              <li>Testimonials</li>
+              <li>Enroll Now</li>
+            </ul>
+          </div>
+          <div class="footerSections">
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
