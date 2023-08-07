@@ -99,18 +99,67 @@ const Landing = () => {
       {/* our services, staff, subsidies, and fees */}
       <div class="ssfoptionSection">
         {/* i think i will have to do a vertical flex column for each picture and button and then a flex horizontal column for each pair */}
-        <div class="ssfPanels">
-          <img src="about1.jpg" class="ssfPanelImage"></img>
-          <button class="ssfPanelButton">Our Services</button>
+        <div class="flipContainer">
+          <div class="flipper">
+
+            <div class="front">
+              <div class="ssfPanels">
+                <img src="about1.jpg" class="ssfPanelImage"></img>
+                <button class="ssfPanelButton">Our Services</button>
+              </div>
+            </div>
+
+            <div class="back">
+              <div class="cardContent">
+                <p>We open from 8am to 6pm and offer Full Day Care, Pre-School/Montessori, and Afterschool Care.  
+                  <br></br><br></br>Within our Morning Sessions, we offer part time care where parents can avail of their children staying on till 2 p.m. to coincide with the pick up of other siblings from our local schools.  Likewise with afterschool children, we can offer part time services where children can be dropped in the morning for breakfast and are transported by ourselves to school.  
+                  <br></br><br></br>We also offer pickups from local schools for our afterschool children. 
+                  <br></br><br></br>We have a fully approved Kitchen where we offer hot, nutritional meals and snacks onsite.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ssfPanels">
-          <img src="about1.jpg" class="ssfPanelImage"></img>
-          <button class="ssfPanelButton">Our Staff</button>
+
+        <div class="flipContainer">
+          <div class="flipper">
+
+            <div class="front">
+              <div class="ssfPanels">
+                <img src="about1.jpg" class="ssfPanelImage"></img>
+                <button class="ssfPanelButton">Our Staff</button>
+              </div>
+            </div>
+
+            <div class="back">
+              <div class="cardContent">
+                <p>We value our staff, their individuality, and experiences they bring to our setting.  All our staff are suitable and highly qualified in their areas and are passionate about caring for the children in their care. 
+                  <br></br><br></br>We understand the importance of family involvement and have an open-door policy,  welcoming any suggestions that ensures a positive experience for your child on their early years journey.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ssfPanels">
-          <img src="about1.jpg" class="ssfPanelImage"></img>
-          <button class="ssfPanelButton">Subsidies and Fees</button>
+
+        <div class="flipContainer">
+          <div class="flipper">
+
+            <div class="front">
+              <div class="ssfPanels">
+                <img src="about1.jpg" class="ssfPanelImage"></img>
+                <button class="ssfPanelButton">Subsidies and Fees</button>
+              </div>
+              </div>
+
+            <div class="back">
+              <div class="cardContent">
+                <p>Universal Subsidies are available to all children and families up to 15 years of age along with free ECCE morning sessions for eligible pre-school/Montessori children. 
+                  <br></br><br></br>For full details see PDF 2023-2024 Right Start Montessori Fees or go to <a src="https://www.ncs.gov.ie/en/">https://www.ncs.gov.ie/en/</a>, type in Roscommon area and view Right Start Montessori fees.  
+                  <br></br><br></br>Alternatively, you are welcome to make an appointment to discuss your childcare issues and fees.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+
       </div>
 
       {/* Enroll section */}
@@ -137,7 +186,7 @@ const Landing = () => {
                 listStyle: "none"
               }}>
                 <li>Home</li>
-                <li>About US</li>
+                <li>About Us</li>
                 <li>Our Mission</li>
                 <li>Our Vision</li>
                 <li>Gallery</li>
