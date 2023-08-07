@@ -62,7 +62,6 @@ body {
 .navbar {
   background-color: white !important;
   padding: 10px;
-  border-radius: 10px; 
 }
 
 /* about */
@@ -114,7 +113,8 @@ body {
 }
 .ssfoptionSection{
   background-color: #E0986F;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -148,13 +148,14 @@ body {
 /* mission and vision */
 .missionVision{
   background-color: #B26DAA;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: -60px;
 }
 .missionVisionContent{
   margin: 40px;
 }
 .missionVisionHeader{
-  margin-top: -20px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 40px;
   color: white;
@@ -163,6 +164,97 @@ body {
 }
 .missionVisionEachSection{
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
+/* Enroll */
+.enrollPanel{
+  width: 550px;
+  height: 550px;
+  background-color: white;
+  border-color: white;
+  border-radius: 50%;
+}
+.enrollLogo{
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+.enrollContainer{
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enrollContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.enrollButton {
+  color: white;
+  background-color: #973E8E;
+  font-family: Comic Sans MS;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  margin-bottom: 40px;
+  font-weight: 5000;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Footer */
+.footerBorder{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 130px;
+  margin-right: 130px;
+}
+.footerImage{
+  width: 150px;
+  height: 290px;
+  margin-right: -40px;
+}
+.socialSection{
+  display: flex;
+  flex-direction: row;
+  margin-left: -20px;
+}
+.icon{
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+}
+.footerSections{
+  display: flex;
+  margin: 20px;
+}
+.footer{
+  background-color: #E0986F;
+/* padding is space between content in the section and its 
+border whereas margin is the space outside the border */
+  padding: 60px;
+}
+.footerCol{
+  flex-basis: 33.33%;
+}
+.navigationHeading{
+  font-family: Comic Sans MS;
+  color: purple;
+}
+.navigationContent{
+  font-family: Comic Sans MS;
+  margin-left: -40px;
+}
+.socialInfo{
+  font-family: Comic Sans MS;
+}
