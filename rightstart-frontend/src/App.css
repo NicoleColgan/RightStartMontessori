@@ -113,8 +113,9 @@ body {
 }
 .ssfoptionSection{
   background-color: #E0986F;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
+  height: 525px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -123,7 +124,7 @@ body {
 .ssfPanelImage {
   width: 202.5px;
   height: 297px;
-  margin-top: 40px;
+  margin-top: 90px;
   cursor: pointer;
 }
 .ssfPanels {
@@ -257,4 +258,39 @@ border whereas margin is the space outside the border */
 }
 .socialInfo{
   font-family: Comic Sans MS;
+}
+
+/* Card flipper */
+.flipContainer{
+  /* depth (distance from the camera) - used for 3D CSS */
+  perspective: 1000px;  
+}
+.flipper{
+  width: 330px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.front{
+  z-index: 2;
+}
+.back{
+  transform: rotateY(180deg);
+}
+.flipContainer:hover .flipper{
+  transform: rotateY(180deg);
+}
+.cardContent{
+  padding: 20px;
+  background-color: white;
+  font-family: Comic Sans MS;
+  color: purple;
 }
