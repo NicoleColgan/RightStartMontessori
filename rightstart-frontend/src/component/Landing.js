@@ -133,7 +133,9 @@ const Landing = () => {
 
             <div class="footerCol">
               <h2 class="navigationHeading">Navigation</h2>
-              <ul class="navigationContent">
+              <ul class="navigationContent" style={{
+                listStyle: "none"
+              }}>
                 <li>Home</li>
                 <li>About US</li>
                 <li>Our Mission</li>
@@ -148,26 +150,27 @@ const Landing = () => {
             </div>
 
             <div class="footerCol">
+              <h2 class="navigationHeading">Contact Us</h2>
               <div class="socialSection">
-                <img src="compass.png" class="icon locationIcon"></img>
-                <p>
+                <img src="placeholder.png" class="icon locationIcon"></img>
+                <p class="socialInfo">
                   Curraghmore, Kiltoom, Athlone, Co. Roscommon, Athlone, Ireland
                 </p>
               </div>
 
               <div class="socialSection">
                 <img src="phone-call.png" class="icon"></img>
-                <p>+353 863704370</p>
+                <p class="socialInfo">+353 863704370</p>
               </div>
 
               <div class="socialSection">
                 <img src="email.png" class="icon"></img>
-                <p>marionmulkearncolgan@gmail.com</p>
+                <p class="socialInfo">marionmulkearncolgan@gmail.com</p>
               </div>
 
               <div class="socialSection">
                 <img src="facebook.png" class="icon"></img>
-                <p>Right Start Montessori</p>
+                <p class="socialInfo">Right Start Montessori</p>
               </div>
             </div>
 

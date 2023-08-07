@@ -213,9 +213,10 @@ body {
   background-color: white;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-left: 90px;
-  margin-right: 90px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 130px;
+  margin-right: 130px;
 }
 .footerImage{
   width: 150px;
@@ -225,17 +226,13 @@ body {
 .socialSection{
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin-left: -20px;
 }
 .icon{
   margin-right: 20px;
   margin-left: 20px;
   width: 40px;
   height: 40px;
-}
-.locationIcon{
-  width: 45px;
-  height: 45px;
 }
 .footerSections{
   display: flex;
@@ -250,4 +247,14 @@ border whereas margin is the space outside the border */
 .footerCol{
   flex-basis: 33.33%;
 }
-
+.navigationHeading{
+  font-family: Comic Sans MS;
+  color: purple;
+}
+.navigationContent{
+  font-family: Comic Sans MS;
+  margin-left: -40px;
+}
+.socialInfo{
+  font-family: Comic Sans MS;
+}
