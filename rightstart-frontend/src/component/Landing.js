@@ -1,9 +1,54 @@
 import React from "react";
 import "../App.css";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Landing = () => {
   const [enrollFormVisible, setEnrollFormVisible] = useState(false);
+
+  //set up emailjs account (sends data directly from browser)
+  //not sending sensitive info so its ok to send from browser
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  emailjs.init("CUdd-rWsjI3vLaUDK"); //public API key (user id of account owner)
+  //function to handle form submission
+  const handleSubmit = async (e) => {
+    setEnrollFormVisible(false);
+    //remove rhe model-open class to allow scrolling again
+    document.body.classList.remove("modal-open");
+
+    e.preventDefault();
+
+    try {
+      await emailjs.send("service_fdk6hf9", "template_adkz9mk", {
+        name,
+        email,
+        message,
+      });
+
+      alert("Email sent successfully");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+      alert("failed to send message");
+    }
+  };
+
+  function handleCancel() {
+    setEnrollFormVisible(false);
+    //remove rhe model-open class to allow scrolling again
+    document.body.classList.remove("modal-open");
+
+    //reset values
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
 
   function handleEnrollButtonClick() {
     setEnrollFormVisible(true);
@@ -11,7 +56,7 @@ const Landing = () => {
     //in js, we can have clases in the same way in java
     //has the same function as java classes whereby a class
     //can have methods and attributes
-    //e.g., 
+    //e.g.,
     //  class Person{
     //    constructor(name, age){
     //      this.name=name;
@@ -27,9 +72,9 @@ const Landing = () => {
     //  const person=new Person("john",25);
     //  person.greet();
 
-    //you can add different classes to the body 
+    //you can add different classes to the body
     //(it has none added by default)
-    //the model-open is a css class that has a rule that sets the 
+    //the model-open is a css class that has a rule that sets the
     //overflow (anything outside of the normal dimensions) to hidden
     //i.e. preventing scrolling
     //its the same as any other class we have added to div elements
@@ -37,37 +82,60 @@ const Landing = () => {
     //in the css class will only begin to apply now
     document.body.classList.add("modal-open");
   }
-  function handleSubmitButtonClick() {
-    setEnrollFormVisible(false);
-    //remove rhe model-open class to allow scrolling again
-    document.body.classList.remove("modal-open");
-  }
   return (
     <div>
       {/* enroll form shows when enroll button is pressed */}
       {enrollFormVisible && (
         <div class="centered-container">
-        <div class="overlay">
-          <div class="enrollFormContainer">
-            <form>
-              <h2 class="enrollFormHeader">Enroll or Make an Enquiry</h2>
-              <input type="text" name="name" placeholder="Name" class="enrollName"></input>
-              <br></br>
-              <input type="email" name="email" placeholder="Email" class="enrollEmail"></input>
-              <br></br>
-              <textarea type="message" name="message" placeholder="Message" class="enrollMessage"></textarea>
-              <br></br>
-              <button type="submit" onClick={handleSubmitButtonClick} class="enrollFormButton">
-                Enroll
-              </button>
-            </form>
+          <div class="overlay">
+            <div class="enrollFormContainer">
+              <form>
+                <h2 class="enrollFormHeader">Enroll or Make an Enquiry</h2>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="enrollName"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+                <br></br>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="enrollEmail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                ></input>
+                <br></br>
+                <textarea
+                  type="message"
+                  name="message"
+                  placeholder="Message"
+                  class="enrollMessage"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+                <br></br>
+                <button
+                  type="submit"
+                  onClick={handleSubmit}
+                  class="enrollFormButton"
+                >
+                  Enroll
+                </button>
+                <button onClick={handleCancel} class="enrollFormButton">
+                  Cancel
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
       )}
       {/* Header for the webpage */}
       <div class="headerContainer" id="home">
-        <img src="/header.jpeg" class="headerImage"></img>
+        <img src="/header.jpg" class="headerImage"></img>
         <div class="ribbon">
           <nav class="navbar">
             <div>
@@ -132,14 +200,13 @@ const Landing = () => {
         <p class="motto">because your child deserves the right start in life</p>
       </div>
 
-  
       {/* About section */}
       <div class="about" id="about">
         <h2 class="aboutHeader">About Us</h2>
         <div class="aboutContent">
           <div class="aboutImagesArea">
-            <img src="about1.jpg" class="about1Image"></img>
-            <img src="about2.jpg" class="about2Image"></img>
+            <img src="garden.jpg" class="about1Image"></img>
+            <img src="baking.jpg" class="about2Image"></img>
           </div>
           <div class="aboutTextArea">
             <p class="aboutText">
@@ -208,7 +275,7 @@ const Landing = () => {
                 <div class="flipper">
                   <div class="front">
                     <div class="ssfPanels">
-                      <img src="about1.jpg" class="ssfPanelImage"></img>
+                      <img src="garden.jpg" class="ssfPanelImage"></img>
                       <button class="ssfPanelButton">Our Services</button>
                     </div>
                   </div>
@@ -242,7 +309,7 @@ const Landing = () => {
                 <div class="flipper">
                   <div class="front">
                     <div class="ssfPanels">
-                      <img src="about1.jpg" class="ssfPanelImage"></img>
+                      <img src="garden.jpg" class="ssfPanelImage"></img>
                       <button class="ssfPanelButton">Our Staff</button>
                     </div>
                   </div>
@@ -269,7 +336,7 @@ const Landing = () => {
                 <div class="flipper">
                   <div class="front">
                     <div class="ssfPanels">
-                      <img src="about1.jpg" class="ssfPanelImage"></img>
+                      <img src="garden.jpg" class="ssfPanelImage"></img>
                       <button class="ssfPanelButton">Subsidies and Fees</button>
                     </div>
                   </div>
@@ -284,7 +351,7 @@ const Landing = () => {
                         <br></br>
                         <br></br>For full details see PDF 2023-2024 Right Start
                         Montessori Fees or go to{" "}
-                        <a src="https://www.ncs.gov.ie/en/">
+                        <a href="https://www.ncs.gov.ie/en/">
                           https://www.ncs.gov.ie/en/
                         </a>
                         , type in Roscommon area and view Right Start Montessori
