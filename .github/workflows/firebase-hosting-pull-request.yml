@@ -17,10 +17,8 @@ jobs:
 
       # set credentials
       - name: set credentials
-        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(cat <<EOF
-        C:\Users\nicole\Downloads\rightstartmontessori-ebce0-firebase-adminsdk-qhvwe-3fa6de41a7.json
-        EOF
-        )"
+        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$( cat "C:\Users\nicole\Downloads\rightstartmontessori-ebce0-firebase-adminsdk-qhvwe-3fa6de41a7.json")"
+
       # download copy of repository
       - name: Checkout code
         uses: actions/checkout@v3
@@ -34,7 +32,7 @@ jobs:
         if: success()
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          # no firebase service account needed
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RIGHTSTARTMONTESSORI_EBCE0 }}'
           projectId: rightstartmontessori-ebce0
 
       - name: Update firebase-tools version
