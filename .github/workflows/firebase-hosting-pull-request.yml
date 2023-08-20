@@ -15,6 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      #clear auth cache
+      - name: Clear auth credentials
+        run: rm -rf $HOME/.cache/oogle-auth-library
+        
       # set credentials
       - name: set credentials
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$( cat "C:\Users\nicole\Downloads\rightstartmontessori-ebce0-firebase-adminsdk-qhvwe-3fa6de41a7.json")"
