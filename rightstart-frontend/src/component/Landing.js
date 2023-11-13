@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { Helmet } from "react-helmet-async";
 
 const Landing = () => {
   const [enrollFormVisible, setEnrollFormVisible] = useState(false);
@@ -83,10 +84,11 @@ const Landing = () => {
     document.body.classList.add("modal-open");
   }
   return (
-    <div>
+    <div class="home">
       {/* enroll form shows when enroll button is pressed */}
       {enrollFormVisible && (
         <div class="centered-container">
+          
           <div class="overlay">
             <div class="enrollFormContainer">
               <form>
@@ -134,15 +136,15 @@ const Landing = () => {
         </div>
       )}
       {/* Header for the webpage */}
-      <div class="headerContainer" id="home">
-        <img src="/header.jpg" class="headerImage"></img>
+      <div class="header-container">
+
+        <div class="ribbon-container">
         <div class="ribbon">
           <nav class="navbar">
-            <div>
-              <img src="/writingOfLogo.png" class="writingOfLogo"></img>
-              <img src="/houseOfLogo.png" class="houseOfLogo"></img>
+            <div class="navbarImageContainer">
+              <img src="/navbarLogo.png" class="navbarLogo"></img>
             </div>
-            <ul class="navbarElements">
+            {/* <ul class="navbarElements">
               <li>
                 <a href="#home" class="navbarElement">
                   Home
@@ -193,9 +195,11 @@ const Landing = () => {
                   Contact
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </nav>
         </div>
+        </div>
+        <img src="/header.jpg" class="headerImage"></img>
         <h1 class="welcomeText">Right Start Montessori</h1>
         <p class="motto">because your child deserves the right start in life</p>
       </div>
