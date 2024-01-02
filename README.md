@@ -3,4 +3,4 @@
 
 > making application responsive - currently its not very accomodating for changing screen sizes
 
-> deployed nav bar also currently isnt moving with scroll
+> deployed nav bar also currently isnt moving with scroll - old one is
